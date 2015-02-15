@@ -1,8 +1,8 @@
 module TFSHistorySummary.Tests
 
-open TFSHistorySummary
 open NUnit.Framework
 
 [<Test>]
-let ``hello returns 42`` () =
-    Assert.True(true)
+let ``Parse default file doesnt crash`` () =
+    let res = TFSHistorySummary.main (Array.create<string> 0 "")
+    Assert.AreEqual(0, res)
