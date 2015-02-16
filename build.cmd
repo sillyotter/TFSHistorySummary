@@ -3,7 +3,7 @@ cls
 
 .paket\paket.bootstrapper.exe
 if errorlevel 1 (
-  exit /b %errorlevel%
+    powershell.exe -ExecutionPolicy remotesigned -File bootstrap.ps1
 )
 
 .paket\paket.exe restore
