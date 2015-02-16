@@ -1,3 +1,5 @@
+module TFSHistorySummary
+
 open System.IO
 open System.Text.RegularExpressions
 

@@ -58,6 +58,7 @@
   -->
   <Import Project="..\..\.paket\paket.targets" />
   <ItemGroup>
+    <Compile Include="AssemblyInfo.fs" />
     <Compile Include="TFSHistorySummary.fs" />
     <None Include="paket.references" />
     <Content Include="App.config">
