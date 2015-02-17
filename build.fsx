@@ -104,12 +104,18 @@ Target "Clean" (fun _ ->
 // --------------------------------------------------------------------------------------
 // Build library & test project
 
-Target "Build" (fun _ ->
+Target "BuildDebug" (fun _ ->
+    !! solutionFile
+    |> MSBuildDebug "" "Rebuild"
+    |> ignore
+)
+
+
+Target "BuildRelease" (fun _ ->
     !! solutionFile
     |> MSBuildRelease "" "Rebuild"
     |> ignore
 )
-
 // --------------------------------------------------------------------------------------
 // Run the unit tests using test runner
 
@@ -130,7 +136,7 @@ Target "All" DoNothing
 
 "Clean"
   ==> "AssemblyInfo"
-  ==> "Build"
+  ==> "BuildDebug"
   ==> "RunTests"
   ==> "All"
 

@@ -90,15 +90,17 @@ let statemachine (s : ParserData) (l : string) =
                          current = 
                              { user = ""
                                items = List.empty } }
+
+
 [<EntryPoint>]
-let main _ = 
+let main args =
     let initialState = 
         { state = ParserState.LookingForStartOfRecord
           changes = List.empty
           current = 
               { user = ""
                 items = List.empty } }
-    File.ReadLines "c:\\Projects\\TFSHistorySummary\\tfhistory.txt"
+    File.ReadLines args.[0]
     |> Seq.map (fun x -> x.TrimEnd())
     |> Seq.fold statemachine initialState
     |> fun s -> 
