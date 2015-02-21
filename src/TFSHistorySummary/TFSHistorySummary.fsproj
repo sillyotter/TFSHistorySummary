@@ -39,6 +39,8 @@
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
     <WarningsAsErrors />
     <OtherFlags>--warnon:1182</OtherFlags>
+    <StartArguments>C:\\Projects\\TFSHistorySummary\\tfhistory.txt</StartArguments>
+    <StartWorkingDirectory>C:\Projects\TFSHistorySummary</StartWorkingDirectory>
   </PropertyGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>
